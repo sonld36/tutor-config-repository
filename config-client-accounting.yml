@@ -1,0 +1,21 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /accounting
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8080/auth/realms/spring-cloud-config-realm/protocol/openid-connect/certs
+          issuer-uri: http://localhost:8080/auth/realms/spring-cloud-config-realm
+
+keycloak:
+  realm: project-final-realm
+  auth-server-url: http://localhost:8080/auth
+  resource: accounting-service
+  credentials:
+    secret: c4943a1e-bf0e-461f-b68b-0202bfe277c1
+    use-resource-role-mappings: true
+    bearer-only: true
