@@ -8,15 +8,15 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://localhost:8080/auth/realms/spring-cloud-config-realm/protocol/openid-connect/certs
-          issuer-uri: http://localhost:8080/auth/realms/spring-cloud-config-realm
+          jwk-set-uri: http://localhost:8081/auth/realms/spring-cloud-config-realm/protocol/openid-connect/certs
+          issuer-uri: http://localhost:8081/auth/realms/spring-cloud-config-realm
 
 keycloak:
-  realm: project-final-realm
+  realm: tutor-microservices-realm
   auth-server-url: http://localhost:8081/auth
   resource: accounting-service
-  client-id: tutor-services-client
+  client-id: accounting_service-client
   credentials:
-    secret: c4943a1e-bf0e-461f-b68b-0202bfe277c1
+    secret: duKYfSGYqW2mO94HMxQVtfIfPonUQmbR
     use-resource-role-mappings: true
     bearer-only: true
