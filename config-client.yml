@@ -3,3 +3,5 @@ spring:
     config:
       allow-override: true
       override-none: true
+  jackson:
+    property-naming-strategy: SNAKE_CASE
