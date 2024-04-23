@@ -15,6 +15,7 @@ keycloak:
   realm: project-final-realm
   auth-server-url: http://localhost:8080/auth
   resource: accounting-service
+  client-id: tutor-services-client
   credentials:
     secret: c4943a1e-bf0e-461f-b68b-0202bfe277c1
     use-resource-role-mappings: true
