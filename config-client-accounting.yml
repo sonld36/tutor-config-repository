@@ -13,7 +13,7 @@ spring:
 
 keycloak:
   realm: project-final-realm
-  auth-server-url: http://localhost:8080/auth
+  auth-server-url: http://localhost:8081/auth
   resource: accounting-service
   client-id: tutor-services-client
   credentials:
