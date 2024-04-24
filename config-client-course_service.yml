@@ -1,0 +1,23 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /course
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/certs
+          issuer-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}
+
+keycloak:
+    realm: tutor-microservices-realm
+    auth-server-url: http://localhost:8081
+    resource: course-service
+    client-id: course_service-client
+    admin-client-id: admin-cli
+    credentials:
+      secret: KS4pZeYw8xciShVHUYDr8ZAotsx18HJL
+      use-resource-role-mappings: true
+      bearer-only: true
