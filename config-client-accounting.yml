@@ -11,6 +11,19 @@ spring:
           jwk-set-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/certs
           issuer-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}
 
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tutor_system
+    username: admin
+    password: admin
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        show_sql: true
 keycloak:
   realm: tutor-microservices-realm
   auth-server-url: http://localhost:8081
