@@ -13,6 +13,7 @@ spring:
             client-secret: ${keycloak.credentials.secret}
         provider:
           keycloak:
+            issuer-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}
             token-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/token
 
   jackson:
