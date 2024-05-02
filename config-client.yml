@@ -11,6 +11,7 @@ spring:
             authorization-grant-type: client_credentials
             client-id: ${keycloak.client-id}
             client-secret: ${keycloak.credentials.secret}
+            provider: keycloak
         provider:
           keycloak:
             token-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/token
