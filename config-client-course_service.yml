@@ -10,15 +10,7 @@ spring:
         jwt:
           jwk-set-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/certs
           issuer-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}
-      client:
-        registration:
-          keycloak:
-            authorization-grant-type: client_credentials
-          client-id: course_service-client
-          client-secret: KS4pZeYw8xciShVHUYDr8ZAotsx18HJL
-        provider:
-          keycloak:
-            token-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/token
+
   datasource:
     url: jdbc:postgresql://localhost:5432/tutor-system
     username: admin

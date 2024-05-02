@@ -3,16 +3,16 @@ spring:
     config:
       allow-override: true
       override-none: true
-#  security:
-#    oauth2:
-#      client:
-#        registration:
-#          keycloak:
-#            authorization-grant-type: client_credentials
-#          client-id: ${keycloak.client-id}
-#          client-secret: ${keycloak.credentials.secret}
-#        provider:
-#          keycloak:
-#            token-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/token
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            authorization-grant-type: client_credentials
+            client-id: ${keycloak.client-id}
+            client-secret: ${keycloak.credentials.secret}
+        provider:
+          keycloak:
+            token-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/token
   jackson:
     property-naming-strategy: SNAKE_CASE
