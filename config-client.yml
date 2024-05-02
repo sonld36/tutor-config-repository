@@ -12,11 +12,11 @@ spring:
             client-id: ${keycloak.client-id}
             client-secret: ${keycloak.credentials.secret}
             redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
-            authorization-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/auth
             scope: openid
         provider:
           keycloak:
             token-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/token
+            authorization-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/auth
   jackson:
     property-naming-strategy: SNAKE_CASE
 webclient:
