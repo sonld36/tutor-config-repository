@@ -14,8 +14,8 @@ spring:
         registration:
           keycloak:
             authorization-grant-type: client_credentials
-          client-id: ${keycloak.client-id}
-          client-secret: ${keycloak.credentials.secret}
+          client-id: course_service-client
+          client-secret: KS4pZeYw8xciShVHUYDr8ZAotsx18HJL
         provider:
           keycloak:
             token-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/token
