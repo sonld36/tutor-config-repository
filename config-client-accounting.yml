@@ -3,13 +3,13 @@ server:
   servlet:
     context-path: /accounting
 
-spring:
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          jwk-set-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/certs
-          issuer-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}
+#spring:
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          jwk-set-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/certs
+#          issuer-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}
 
   datasource:
     url: jdbc:postgresql://localhost:5432/tutor-system
