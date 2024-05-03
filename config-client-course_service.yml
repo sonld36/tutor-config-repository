@@ -28,8 +28,9 @@ keycloak:
     realm: tutor-microservices-realm
     auth-server-url: http://localhost:8081
     resource: course-service
-    client-id: realm-management
+    client-id: course_service-client
+    admin-client-id: admin-cli
     credentials:
-      secret: G2gSYCpTzKw2crOECnOZRcZFdoa3yK7E
+      secret: KS4pZeYw8xciShVHUYDr8ZAotsx18HJL
       use-resource-role-mappings: true
       bearer-only: true
