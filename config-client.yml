@@ -11,6 +11,7 @@ spring:
             authorization-grant-type: client_credentials
             client-id: ${keycloak.client-id}
             client-secret: ${keycloak.credentials.secret}
+            client-name: ${keycloak.client-id}
         provider:
           keycloak:
             issuer-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}
