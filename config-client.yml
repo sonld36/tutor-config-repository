@@ -8,11 +8,9 @@ spring:
       client:
         registration:
           keycloak:
-            authorization-grant-type: authorization_code
+            authorization-grant-type: client_credentials
             client-id: ${keycloak.client-id}
             client-secret: ${keycloak.credentials.secret}
-            redirect-uri: '{baseUrl}/authorized/{registrationId}'
-            scope: openid
         provider:
           keycloak:
             issuer-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}
