@@ -33,4 +33,4 @@ security:
 eureka:
   client:
     service-url:
-      defaultZone: lb://api-gateway/eureka/web
+      defaultZone: lb://api-gateway/eureka/
