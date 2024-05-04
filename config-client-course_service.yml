@@ -4,11 +4,12 @@ server:
     context-path: /course
 
 spring:
+  application:
+    name: course-service
   datasource:
     url: jdbc:postgresql://localhost:5432/tutor-system
     username: admin
     password: admin
-
   jpa:
     hibernate:
       ddl-auto: update

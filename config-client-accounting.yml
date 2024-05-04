@@ -4,6 +4,8 @@ server:
     context-path: /accounting
 
 spring:
+  application:
+    name: accounting-service
   datasource:
     url: jdbc:postgresql://localhost:5432/tutor-system
     username: admin
