@@ -3,33 +3,8 @@ spring:
     config:
       allow-override: true
       override-none: true
-#  security:
-#    oauth2:
-#      client:
-#        registration:
-#          keycloak:
-#            authorization-grant-type: client_credentials
-#            client-id: ${keycloak.client-id}
-#            client-secret: ${keycloak.credentials.secret}
-#            client-name: ${keycloak.client-id}
-#        provider:
-#          keycloak:
-#            issuer-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}
-
   jackson:
     property-naming-strategy: SNAKE_CASE
-webclient:
-  base-url: http://localhost:8082/accounting
-  connect-timeout-ms: 10000
-  read-timeout-ms: 10000
-  write-timeout-ms: 10000
-  max-in-memory-size: 10485760 # 10MB
-  content-type: 'application/json'
-  accept-type: 'application/json'
-security:
-  default-client-registration-id: keycloak
-
-
 eureka:
   client:
     service-url:
