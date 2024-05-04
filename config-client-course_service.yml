@@ -1,5 +1,4 @@
 server:
-  port: 8083
   servlet:
     context-path: /course
 
@@ -16,8 +15,6 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
         show_sql: true
-  application:
-    name: course-service
 #keycloak:
 #    realm: tutor-microservices-realm
 #    auth-server-url: http://localhost:8081

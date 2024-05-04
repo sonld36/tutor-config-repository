@@ -1,5 +1,4 @@
 server:
-  port: 8082
   servlet:
     context-path: /accounting
 
@@ -16,8 +15,6 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
         show_sql: true
-  application:
-    name: accounting-service
 #keycloak:
 #  realm: tutor-microservices-realm
 #  auth-server-url: http://localhost:8081
