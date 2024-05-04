@@ -7,7 +7,6 @@ spring:
     property-naming-strategy: SNAKE_CASE
     serialization:
       WRAP_ROOT_VALUE: true
-      AUTO_DETECT_FIELDS: true
 eureka:
   client:
     service-url:
