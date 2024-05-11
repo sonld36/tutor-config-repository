@@ -20,9 +20,9 @@ keycloak:
   realm: tutor-microservices-realm
   auth-server-url: http://localhost:8081
   resource: accounting-service
-  client-id: accounting_service-client
+  client-id: admin-cli
   admin-client-id: admin-cli
   credentials:
-    secret: duKYfSGYqW2mO94HMxQVtfIfPonUQmbR
+    secret: NvKtvHf0cvWHuqjO1WHMgTiaHvEFEv0I
     use-resource-role-mappings: true
     bearer-only: true
