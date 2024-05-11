@@ -21,7 +21,7 @@ keycloak:
   auth-server-url: http://localhost:8081
   resource: accounting-service
   client-id: tutor-gateway-client
-  admin-client-id: admin-cli
+  admin-client-id: tutor-gateway-client
   credentials:
     secret: sp7JodpAxXaUa8QBGamV6x2WLdVvu9vA
     use-resource-role-mappings: true
