@@ -10,8 +10,6 @@ spring:
           uri: lb://course-service
           predicates:
             - Path=/course/**
-          filters:
-            - AddRequestHeader=X-Request-Email, sonld6@gmail.com
         - id: payment-service
           uri: lb://payment-service
           predicates:
