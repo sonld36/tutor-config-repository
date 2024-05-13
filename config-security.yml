@@ -16,5 +16,5 @@ spring:
         jwt:
           issuer-uri: http://localhost:8081/realms/tutor-microservices-realm
     user:
-      name: ${BASIC_AUTH_USERNAME}
-      password: ${BASIC_AUTH_PASSWORD}
+      name: tutormicroservices
+      password: allIAO27
