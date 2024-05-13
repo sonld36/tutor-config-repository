@@ -1,0 +1,20 @@
+keycloak:
+  realm: tutor-microservices-realm
+  auth-server-url: http://localhost:8081
+  resource: accounting-service
+  client-id: tutor-gateway-client
+  admin-client-id: tutor-gateway-client
+  credentials:
+    secret: sp7JodpAxXaUa8QBGamV6x2WLdVvu9vA
+    use-resource-role-mappings: true
+    bearer-only: true
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8081/realms/tutor-microservices-realm
+    user:
+      name: tutormicroservices
+      password: allIAO27
