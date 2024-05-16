@@ -15,8 +15,8 @@ spring:
 payment:
   vnpay:
     url: https://sandbox.vnpayment.vn/paymentv2/vpcpay.html
-    tmn-code: FZ3V3X6E
-    secret-key: GCSR4PD9XIQ4YKRJC3XY8FZM00VX8IFP
+    tmn-code: LEZK0VE6
+    secret-key: 9AZB7PZBDP6Y1TW0DP3IGFUPAEOCYA39
     return-url: http://localhost:8084/payment/integration/vn-pay-callback
     api-url: https://sandbox.vnpayment.vn/merchant_webapi/api/transaction
     version: 2.1.0
