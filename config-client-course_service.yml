@@ -5,7 +5,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/tutor-system
+    url: jdbc:postgresql://localhost:5433/tutor-system
     username: admin
     password: admin
   jpa:
