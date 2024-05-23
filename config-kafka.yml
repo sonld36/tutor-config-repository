@@ -19,6 +19,6 @@ kafka-consumer-config:
 kafka:
   course:
     topic:
-      payment-log: db.public.payment_logs
+      payment-log: dbv2.public.payment_logs
     group:
       payment-processor: omni.course.payment-processor
