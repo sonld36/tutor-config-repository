@@ -40,6 +40,15 @@ spring:
           uri: lb://signal-service
           predicates:
             - Path=/signal/**
+          metadata:
+            cors:
+            allowedOriginPatterns: '*'
+            allowedMethods:
+              - GET
+              - POST
+            allowedHeaders: '*'
+            maxAge: 30
+
         - id: livechat-service
           uri: lb://livechat-service
           predicates:
