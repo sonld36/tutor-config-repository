@@ -40,6 +40,9 @@ spring:
           uri: lb://signal-service
           predicates:
             - Path=/signal/**
+          metadata:
+            response-timeout: 20000
+            connect-timeout: 20000
         - id: livechat-service
           uri: lb://livechat-service
           predicates:
