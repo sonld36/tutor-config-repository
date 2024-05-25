@@ -1,21 +1,6 @@
 spring:
   cloud:
     gateway:
-      globalcors:
-        cors-configurations:
-          '[/**]':
-            allowedOriginPatterns: "*"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - DELETE
-              - OPTIONS
-              - PATCH
-              - HEAD
-            allowedHeaders:
-              - "*"
-            allowCredentials: true
       routes:
         - id: accounting-service
           uri: lb://accounting-service
@@ -39,10 +24,12 @@ spring:
           uri: http://localhost:8761
           predicates:
             - Path=/eureka/**
-#        - id: signal-service-sockjs-route
-#          uri: lb://signal-service
-#          predicates:
-#            - Path=/signaling/info/**
+        # SockJS route
+        - id: signal-service-sockjs-route
+          uri: lb://signal-service
+          predicates:
+            - Path=/signaling/info/**
+        # Normal Websocket route
         - id: signal-service
           uri: lb:ws://signal-service
           predicates:
