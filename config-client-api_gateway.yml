@@ -1,6 +1,17 @@
 spring:
   cloud:
     gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+            allowedHeaders:
+              - "*"
       routes:
         - id: accounting-service
           uri: lb://accounting-service
@@ -13,7 +24,7 @@ spring:
         - id: payment-service
           uri: lb://payment-service
           predicates:
-              - Path=/payment/**
+            - Path=/payment/**
         - id: discovery-server
           uri: http://localhost:8761
           predicates:
