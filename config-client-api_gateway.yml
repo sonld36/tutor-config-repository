@@ -24,4 +24,12 @@ spring:
           uri: http://localhost:8761
           predicates:
             - Path=/eureka/**
+        - id: signal-service
+          uri: lb://signal-service
+          predicates:
+            - Path=/signal/**
+        - id: livechat-service
+          uri: lb://livechat-service
+          predicates:
+            - Path=/livechat/**
 
