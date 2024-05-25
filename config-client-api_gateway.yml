@@ -36,13 +36,14 @@ spring:
           uri: http://localhost:8761
           predicates:
             - Path=/eureka/**
-        - id: signal-service
+        - id: signal-service-sockjs-route
           uri: lb://signal-service
           predicates:
-            - Path=/signal/**
-          metadata:
-            response-timeout: 20000
-            connect-timeout: 20000
+            - Path=/signaling/info/**
+        - id: signal-service
+          uri: lb:ws://signal-service
+          predicates:
+            - Path=/signaling/**
         - id: livechat-service
           uri: lb://livechat-service
           predicates:
