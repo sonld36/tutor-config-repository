@@ -1,4 +1,4 @@
 minio:
-  url: http://localhost:9001
+  url: http://localhost:9000
   access-key: ${MINIO_ACCESS_KEY}
   secret-key: ${MINIO_SECRET_KEY}
