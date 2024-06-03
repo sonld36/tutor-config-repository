@@ -21,4 +21,9 @@ kafka:
     topic:
       payment-log: dbv2.public.payment_logs
     group:
-      payment-processor: omni.course.payment-processor
+      course-payment-processor: omni.course.payment-processor
+  call:
+    topic:
+      payment-log: dbv2.public.payment_logs
+    group:
+      call-payment-processor: omni.call.payment-processor
