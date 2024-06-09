@@ -4,7 +4,7 @@ spring:
       globalcors:
         cors-configurations:
           '[/**]':
-          allowedOrigins: "*"
+            allowedOrigins: "*"
       routes:
         - id: accounting-service
           uri: lb://accounting-service
