@@ -1,6 +1,10 @@
 spring:
   cloud:
     gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+          allowedOrigins: "*"
       routes:
         - id: accounting-service
           uri: lb://accounting-service
