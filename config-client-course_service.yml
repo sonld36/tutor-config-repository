@@ -1,7 +1,7 @@
 server:
   port: 0
   servlet:
-    context-path: /course
+    context-path: /courseapi
 
 spring:
   datasource:
