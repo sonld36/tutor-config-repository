@@ -1,31 +1,49 @@
 spring:
   cloud:
     gateway:
-      globalcors:
-        add-to-simple-url-handler-mapping: true
-        cors-configurations:
-          '[/**]':
-            allowedOrigins: "*"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - DELETE
-            allowedHeaders:
-              - "*"
       routes:
         - id: accounting-service
           uri: lb://accounting-service
           predicates:
             - Path=/accounting/**
+          metadata:
+            cors:
+              allowedOrigins: "*"
+              allowedMethods:
+                - GET
+                - POST
+                - PUT
+                - DELETE
+              allowedHeaders:
+                - "*"
         - id: course-service
           uri: lb://course-service
           predicates:
             - Path=/courseapi/**
+          metadata:
+            cors:
+              allowedOrigins: "*"
+              allowedMethods:
+                - GET
+                - POST
+                - PUT
+                - DELETE
+              allowedHeaders:
+                - "*"
         - id: payment-service
           uri: lb://payment-service
           predicates:
             - Path=/payment/**
+          metadata:
+            cors:
+              allowedOrigins: "*"
+              allowedMethods:
+                - GET
+                - POST
+                - PUT
+                - DELETE
+              allowedHeaders:
+                - "*"
         - id: discovery-server
           uri: http://localhost:8761
           predicates:
@@ -50,4 +68,14 @@ spring:
           uri: lb://livechat-service
           predicates:
             - Path=/livechat/**
+          metadata:
+            cors:
+              allowedOrigins: "*"
+              allowedMethods:
+                - GET
+                - POST
+                - PUT
+                - DELETE
+              allowedHeaders:
+                - "*"
 
