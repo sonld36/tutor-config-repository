@@ -6,3 +6,5 @@ spring:
     port: 6379
     cache-null-values: true
     time-to-live: 60000
+    key-serializer: org.springframework.data.redis.serializer.StringRedisSerializer
+    value-serializer: org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer
